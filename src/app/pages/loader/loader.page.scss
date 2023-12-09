@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Oswald:wght@200&display=swap");
+
+.no-scroll {
+  --overflow: hidden;
+}
+
+.bgimg {
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 72%;
+}
+
+.splash-title {
+  position: absolute;
+  width:100%;
+  top: 20%;
+  text-align: center;
+}
+
+h1 {
+  font-family: "Limelight";
+  color: #ff9232;
+  opacity: 40%;
+  font-size: 54px;
+  filter: drop-shadow(0 0 4px #FF9232);
+  padding-bottom:40px;
+}

@@ -1,0 +1,38 @@
+<ion-menu contentId="mainContent">
+  <div class="sidemenu-content">
+    Logged in as:<br>
+    <img src="assets/img/profile.jpg" class="sidemenu-img">
+    <span class="sidemenu-user" [routerLink]="['/profile']">MIKKO M.</span>
+
+    <div class="sidemenu-nav">
+      <ion-list class="list-top" [routerLink]="['/signature']">Signature cocktails <span
+          class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/menu']">Food menu <span class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/browse']">Browse cocktails <span class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/contact']">Contact us <span
+          class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/bookatable']" class="sidemenu-active">Book a table <span class="sidebar-right">&raquo;</span></ion-list>
+    </div>
+
+    <div>
+      <h5>BarCode</h5>
+    </div>
+  </div>
+</ion-menu>
+
+<div class="ion-page" id="mainContent" main>
+  <ion-buttons>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-icon name="cart-outline" class="cart-icon" slot="end" [routerLink]="['/checkout']"></ion-icon>
+  </ion-buttons>
+
+  <img src="assets/img/bgimg.jpg" class="bgimg">
+  <div class="splash-title">
+
+    <h2>BarCode</h2>
+    <h4>Book a table</h4>
+
+    <div>
+    </div>
+  </div>
+</div>

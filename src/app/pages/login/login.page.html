@@ -1,0 +1,26 @@
+<ion-content [fullscreen]="true" class="no-scroll">
+  <img src="assets/img/bgimg.jpg" class="bgimg">
+
+  <div class="splash-title">
+    <h2>welcome to</h2>
+    <h3>BarCode</h3>
+
+    <form [formGroup]="form">
+      <p><ion-input placeholder="Enter email" type="email" formControlName="email" clearInput></ion-input>
+        <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.required">Email is mandatory</ion-label>
+        <ion-label color="danger" *ngIf="form.get('email').touched && form.get('email').errors?.email">Email is invalid</ion-label></p>
+
+      <p><ion-input placeholder="Enter password" type="password" formControlName="password" clearInput></ion-input>
+        <ion-label color="danger" *ngIf="form.get('password').touched && form.get('password').errors?.required">Password is mandatory</ion-label></p>
+
+      <ion-button [disabled]="!form.valid" (click)="login()">LOG IN</ion-button>
+    </form>
+
+    <p class="login-bottom"><a id="present-alert"> Problems logging in?</a>
+      <ion-alert trigger="present-alert" subHeader="Contact help@barcode.com for help regarding the app."
+        message="If you need urgent help with something else, please contact bar staff immediately."></ion-alert></p>
+
+      <p class="login-bottom"><a [routerLink]="['/register']"> Create an account</a>
+    </p>
+  </div>
+</ion-content>

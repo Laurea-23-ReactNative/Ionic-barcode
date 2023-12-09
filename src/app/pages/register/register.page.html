@@ -1,0 +1,31 @@
+<div class="ion-page" id="mainContent" main>
+  <ion-buttons slot="start">
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/login']"></ion-icon>
+  </ion-buttons>
+
+  <img src="assets/img/bgimg.jpg" class="bgimg">
+
+  <div class="splash-title">
+    <h2>BarCode</h2>
+    <h4>create account</h4>
+
+    <div>
+      <p><ion-input placeholder="Enter first name" clearInput></ion-input>
+
+        <ion-input placeholder="Enter last name" clearInput></ion-input>
+
+        <ion-input placeholder="Enter e-mail address" clearInput></ion-input>
+
+        <ion-input placeholder="Enter password" type="password" clearInput></ion-input>
+
+        <ion-input placeholder="Confirm password" type="password" clearInput></ion-input>
+      </p>
+
+      <p><ion-checkbox labelPlacement="end"></ion-checkbox>&emsp;Agree to <a (click)="presentAlert()">Terms of Service</a></p>
+
+      <ion-button>CREATE ACCOUNT</ion-button>
+
+      <p class="login-bottom"><a [routerLink]="['/login']">Already have an account? Log in here</a></p>
+    </div>
+  </div>
+</div>

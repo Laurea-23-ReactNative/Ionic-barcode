@@ -1,0 +1,53 @@
+<ion-menu contentId="mainContent">
+  <div class="sidemenu-content">
+    Logged in as:<br>
+    <img src="assets/img/profile.jpg" class="sidemenu-img">
+    <span class="sidemenu-user" [routerLink]="['/profile']">MIKKO M.</span>
+
+    <div class="sidemenu-nav">
+      <ion-list class="list-top" [routerLink]="['/signature']">Signature cocktails <span
+          class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/menu']">Food menu <span class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/browse']">Browse cocktails <span class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/contact']" class="sidemenu-active">Contact us <span
+          class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/bookatable']">Book a table <span class="sidebar-right">&raquo;</span></ion-list>
+    </div>
+
+    <div>
+      <h5>BarCode</h5>
+    </div>
+  </div>
+</ion-menu>
+
+<div class="ion-page" id="mainContent" main>
+  <ion-buttons>
+    <ion-menu-button slot="start"></ion-menu-button>
+    <ion-icon name="cart-outline" class="cart-icon" slot="end" [routerLink]="['/checkout']"></ion-icon>
+  </ion-buttons>
+
+  <img src="assets/img/bgimg.jpg" class="bgimg">
+  <div class="splash-title">
+
+    <h2>BarCode</h2>
+    <h4>Contact us</h4>
+
+    <div>
+      <ion-card>
+        <p>Kaivokatu 1<br>
+          00100 Helsinki</p>
+
+        <p>
+          +358 40 1234567<br>
+          contact&#64;barcode.com</p>
+
+        <p>
+          Monday to Thursday 4pm - 12am<br>
+          Friday to Saturday 2pm - 2am<br>
+          Sunday 2pm - 10pm</p>
+      </ion-card>
+
+      <p><img src="/assets/img/map.jpg" class="map"></p>
+    </div>
+  </div>
+</div>

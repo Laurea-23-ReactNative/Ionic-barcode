@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Limelight&family=Oswald:wght@200&family=Roboto&display=swap");
+.bgimg {
+  width: auto;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 72%;
+  position:fixed;
+}
+
+.splash-title {
+  position: absolute;
+  width: 100%;
+  top: 7%;
+  text-align: center;
+}
+
+.splash-title a {
+    text-decoration:underline;
+    color:#e1bc3a;
+}
+
+h1 {
+  font-family: "Limelight";
+  color: #ff9232;
+  opacity: 40%;
+  font-size: 54px;
+  filter: drop-shadow(0 0 4px #ff9232);
+  padding-bottom: 40px;
+}
+
+h2 {
+  font-family: "Limelight";
+  color: #ff9232;
+  font-size: 36px;
+}
+
+h3 {
+  font-family: "Limelight";
+  color: #e1bc3a;
+  font-size: 54px;
+  filter: drop-shadow(0 0 4px #ff9232);
+  padding-bottom:40px;
+}
+
+h4 {
+  font-family: "Oswald";
+  color: #e1bc3a;
+  font-size: 44px;
+  text-transform: uppercase;
+  font-weight:bold;
+  padding-bottom:20px;
+}
+
+.login-bottom {
+  font-family: "Roboto";
+  color: #fff;
+  font-weight: bold;
+  line-height: 2.4em;
+}
+
+.login-bottom a {
+  color: #fff;
+  text-decoration: none;
+}
+
+ion-button {
+  --background: #ff9232;
+  --background-activated: #e1bc3a;
+  --background-focused: #e1bc3a;
+  --border-radius: 20px;
+  width: 80%;
+  height: 60px;
+  font-family: "Roboto";
+  font-weight: bold;
+  letter-spacing: 0;
+  font-size: 22px;
+  color: #000;
+}
+
+ion-input {
+  width: 80%;
+  margin-left:auto;
+  margin-right: auto;
+  background-color:#0d0d0d;
+  border-radius:10px;
+  font-family: "Roboto";
+  color:#fff;
+  margin-bottom:10px;
+}
+
+ion-icon {
+  padding:15px;
+}
