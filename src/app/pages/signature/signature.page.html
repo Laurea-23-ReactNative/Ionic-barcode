@@ -8,9 +8,9 @@
       <ion-list class="list-top" [routerLink]="['/signature']" class="sidemenu-active">Signature cocktails <span
           class="sidebar-right">&raquo;</span></ion-list>
       <ion-list [routerLink]="['/menu']">Food menu <span class="sidebar-right">&raquo;</span></ion-list>
-      <ion-list [routerLink]="['/browse']">Browse cocktails <span class="sidebar-right">&raquo;</span></ion-list>
-      <ion-list [routerLink]="['/contact']">Contact us <span
+      <ion-list [routerLink]="['/browse']">Browse cocktails <span
           class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/contact']">Contact us <span class="sidebar-right">&raquo;</span></ion-list>
       <ion-list [routerLink]="['/bookatable']">Book a table <span class="sidebar-right">&raquo;</span></ion-list>
     </div>
 
@@ -22,8 +22,8 @@
 
 <div class="ion-page" id="mainContent" main>
   <ion-buttons>
-    <ion-menu-button slot="start"></ion-menu-button>
-    <ion-icon name="cart-outline" class="cart-icon" slot="end" [routerLink]="['/checkout']"></ion-icon>
+    <ion-menu-toggle><ion-icon name="menu-outline" class="menu-icon"></ion-icon></ion-menu-toggle>
+    <ion-icon name="cart-outline" class="cart-icon" [routerLink]="['/checkout']"></ion-icon>
   </ion-buttons>
 
   <img src="assets/img/bgimg.jpg" class="bgimg">
@@ -33,6 +33,21 @@
     <h4>Signature Cocktails</h4>
 
     <div>
+      <ion-card class="cocktail-card">
+        <ion-icon name="heart-outline" class="fave-icon"></ion-icon>
+        <span class="cocktail-title">Cucumber Mojito 9,90 €</span>
+        <img src="assets/img/drink1.png" class="cocktail-img">
+        <p class="cocktail-details">Bacardi Carta Blanca, cucumber, lime, mint, sugar, soda water</p>
+        <p class="disclaimer">Order this drink &raquo;</p>
+      </ion-card>
+      <br>
+      <ion-card class="cocktail-card">
+        <ion-icon name="heart-outline" class="fave-icon"></ion-icon>
+        <span class="cocktail-title">Old Fashioned 12,90 €</span>
+        <img src="assets/img/drink3.png" class="cocktail-img">
+        <p class="cocktail-details">Maker's Mark, sugar, bitters, orange, water</p>
+        <p class="disclaimer">Order this drink &raquo;</p>
+      </ion-card>
     </div>
   </div>
 </div>

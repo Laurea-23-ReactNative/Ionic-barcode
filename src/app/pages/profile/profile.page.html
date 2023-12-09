@@ -1,13 +1,15 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>profile</ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="ion-page" id="mainContent" main>
+  <ion-buttons slot="start">
+    <ion-icon name="arrow-back-outline" size="large" [routerLink]="['/index']"></ion-icon>
+  </ion-buttons>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">profile</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <img src="assets/img/bgimg.jpg" class="bgimg">
+
+  <div class="splash-title">
+      <div>
+        <img src="assets/img/profile.jpg" class="profile-page-image"><br>
+        <span class="user-title">Mikko M</span><br>
+        <span class="login-bottom">user since november 2023</span><br>
+        <ion-icon name="settings" size="large"></ion-icon>
+      </div>
+  </div>

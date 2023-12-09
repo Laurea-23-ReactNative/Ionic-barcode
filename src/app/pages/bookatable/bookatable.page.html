@@ -8,9 +8,9 @@
       <ion-list class="list-top" [routerLink]="['/signature']">Signature cocktails <span
           class="sidebar-right">&raquo;</span></ion-list>
       <ion-list [routerLink]="['/menu']">Food menu <span class="sidebar-right">&raquo;</span></ion-list>
-      <ion-list [routerLink]="['/browse']">Browse cocktails <span class="sidebar-right">&raquo;</span></ion-list>
-      <ion-list [routerLink]="['/contact']">Contact us <span
+      <ion-list [routerLink]="['/browse']">Browse cocktails <span
           class="sidebar-right">&raquo;</span></ion-list>
+      <ion-list [routerLink]="['/contact']">Contact us <span class="sidebar-right">&raquo;</span></ion-list>
       <ion-list [routerLink]="['/bookatable']" class="sidemenu-active">Book a table <span class="sidebar-right">&raquo;</span></ion-list>
     </div>
 
@@ -22,8 +22,8 @@
 
 <div class="ion-page" id="mainContent" main>
   <ion-buttons>
-    <ion-menu-button slot="start"></ion-menu-button>
-    <ion-icon name="cart-outline" class="cart-icon" slot="end" [routerLink]="['/checkout']"></ion-icon>
+    <ion-menu-toggle><ion-icon name="menu-outline" class="menu-icon"></ion-icon></ion-menu-toggle>
+    <ion-icon name="cart-outline" class="cart-icon" [routerLink]="['/checkout']"></ion-icon>
   </ion-buttons>
 
   <img src="assets/img/bgimg.jpg" class="bgimg">
@@ -33,6 +33,10 @@
     <h4>Book a table</h4>
 
     <div>
+      <ion-card class="cocktail-card">
+        Book a table by calling the restaurant (+358401234567) or online via following the button below to our partner company website.
+      </ion-card>
+      <ion-button>Book a table</ion-button>
     </div>
   </div>
 </div>

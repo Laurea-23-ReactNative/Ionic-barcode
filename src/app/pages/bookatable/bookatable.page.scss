@@ -77,11 +77,11 @@ ion-button {
   --background-focused: #e1bc3a;
   --border-radius: 20px;
   width: 80%;
-  height: 60px;
+  height: 40px;
   font-family: "Roboto";
   font-weight: bold;
   letter-spacing: 0;
-  font-size: 22px;
+  font-size: 16px;
   color: #000;
 }
 
@@ -164,6 +164,14 @@ ion-list {
   position:absolute;
   right:15px;
   top:15px;
+  font-size:28px;
+}
+
+.menu-icon {
+  position:absolute;
+  left:15px;
+  top:15px;
+  font-size:32px;
 }
 
 .map {
@@ -172,4 +180,9 @@ ion-list {
     border-radius:20px;
     border:1px solid #663a14;
     filter: drop-shadow(0 0 4px #b26623);
+}
+
+.cocktail-card {
+  padding:20px;
+  font-size:18px;
 }
