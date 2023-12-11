@@ -42,9 +42,9 @@ export class BrowsePage implements OnInit {
         var findDiv = document.querySelector<HTMLElement>('.cocktail-card');
         findDiv.style.display = "block";
         findDiv.innerHTML = `
-      <span class="cocktail-title">${cocktailTitle}</span>
-      <p><img src="${cocktailImg}" class="cocktail-img"></p>
-      <p>${cocktailIngredients}</p>`;
+      <h2>${cocktailTitle}</h2>
+      <p><img src="${cocktailImg}" style="width:80%;"></p>
+      <p><small>${cocktailIngredients}</small></p>`;
       }
     };
   }
