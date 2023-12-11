@@ -13,12 +13,10 @@
       <p><ion-input placeholder="Enter password" type="password" formControlName="password" clearInput></ion-input>
         <app-error-message [field]="form.get('password')" error="required" message="Password is mandatory"></app-error-message></p>
 
-      <ion-button [disabled]="!form.valid" (click)="login()">LOG IN</ion-button>
+      <ion-button [disabled]="!form.valid" (click)="login()" id="loginButton">LOG IN</ion-button>
     </form>
 
-    <p class="login-bottom"><a id="present-alert"> Problems logging in?</a>
-      <ion-alert trigger="present-alert" subHeader="Contact help@barcode.com for help regarding the app."
-        message="If you need urgent help with something else, please contact bar staff immediately."></ion-alert></p>
+    <p class="login-bottom" (click)="forgotEmailPassword()" id="recoverPasswordButton">Forgot your email or password?</p>
 
       <p class="login-bottom"><a [routerLink]="['/register']"> Create an account</a>
     </p>
