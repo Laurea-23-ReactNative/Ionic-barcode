@@ -10,20 +10,39 @@
     <h4>create account</h4>
 
     <div>
-      <p><ion-input placeholder="Enter first name" clearInput></ion-input>
+      <form [formGroup]="registerForm.getForm()">
+        <ion-input placeholder="Enter first name" type="text" formControlName="firstName" clearInput></ion-input>
+        <app-error-message [field]="registerForm.getForm().get('firstName')" error="required"
+          message="First name is mandatory"></app-error-message>
 
-        <ion-input placeholder="Enter last name" clearInput></ion-input>
+        <ion-input placeholder="Enter last name" type="text" formControlName="lastName" clearInput></ion-input>
+        <app-error-message [field]="registerForm.getForm().get('lastName')" error="required"
+          message="Last name is mandatory"></app-error-message>
 
-        <ion-input placeholder="Enter e-mail address" clearInput></ion-input>
+        <ion-input placeholder="Enter e-mail address" type="email" formControlName="email" clearInput></ion-input>
+        <app-error-message [field]="registerForm.getForm().get('email')" error="required"
+          message="Email is mandatory"></app-error-message>
+        <app-error-message [field]="registerForm.getForm().get('email')" error="email"
+          message="Email is invalid"></app-error-message>
 
-        <ion-input placeholder="Enter password" type="password" clearInput></ion-input>
+        <ion-input placeholder="Enter password" type="password" formControlName="password" clearInput></ion-input>
+        <app-error-message [field]="registerForm.getForm().get('password')" error="required"
+          message="Password is mandatory"></app-error-message>
+        <app-error-message [field]="registerForm.getForm().get('password')" error="minlength"
+          message="Password has to be longer than 6 characters"></app-error-message>
 
-        <ion-input placeholder="Confirm password" type="password" clearInput></ion-input>
-      </p>
-
-      <p><ion-checkbox labelPlacement="end"></ion-checkbox>&emsp;Agree to <a (click)="presentAlert()">Terms of Service</a></p>
-
-      <ion-button>CREATE ACCOUNT</ion-button>
+        <ion-input placeholder="Confirm password" type="password" formControlName="repeatPassword"
+          clearInput></ion-input>
+        <app-error-message [field]="registerForm.getForm().get('repeatPassword')" error="isntMatching"
+          message="Passwords don't match"></app-error-message>
+        
+          <p>
+        <ion-checkbox formControlName="cbox" labelPlacement="end"></ion-checkbox>&emsp;Agree to <a
+          (click)="presentAlert()">Terms of Service</a>
+        <app-error-message [field]="registerForm.getForm().get('cbox')" error="required"
+          message="Agreeing to Terms of Service is mandatory"></app-error-message></p>
+        <ion-button (click)="register()">CREATE ACCOUNT</ion-button>
+      </form>
 
       <p class="login-bottom"><a [routerLink]="['/login']">Already have an account? Log in here</a></p>
     </div>

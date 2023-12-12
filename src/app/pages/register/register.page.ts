@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
+import { RegisterPageForm } from './form/register.page.form';
+import { FormBuilder } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,10 +10,20 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['./register.page.scss'],
 })
 export class RegisterPage implements OnInit {
-  constructor(private alertController: AlertController) { }
+  registerForm: RegisterPageForm;
+
+  constructor(
+    private alertController: AlertController,
+    private formBuilder: FormBuilder,
+    private router: Router
+  ) {}
 
   ngOnInit() {
-    console.log();
+    this.createForm();
+  }
+
+  private createForm() {
+    this.registerForm = new RegisterPageForm(this.formBuilder);
   }
 
   async presentAlert() {
@@ -25,4 +38,11 @@ export class RegisterPage implements OnInit {
     await alert.present();
   }
 
+  register() {
+    this.registerForm.getForm().markAllAsTouched();
+    
+    if (this.registerForm.getForm().valid) {
+      this.router.navigate(['index']);
+    }
+  }
 }

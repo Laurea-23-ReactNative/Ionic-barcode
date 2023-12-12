@@ -28,6 +28,7 @@
     "@capacitor/keyboard": "5.0.6",
     "@capacitor/status-bar": "5.0.6",
     "@ionic/angular": "^7.0.0",
+    "@ngrx/effects": "^17.0.1",
     "@ngrx/store": "^17.0.1",
     "@ngrx/store-devtools": "^17.0.1",
     "@types/jest": "^29.5.11",
