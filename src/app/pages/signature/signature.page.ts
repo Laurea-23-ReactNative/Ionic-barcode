@@ -7,9 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SignaturePage implements OnInit {
 
-  constructor() { }
+  heartType: string = "heart-outline";
 
-  ngOnInit() {
-  }
+    ngOnInit(){
+      console.log()
+    }
 
+    toggleHeart(){
+      this.heartType = this.heartType == "heart" ? "heart-outline" : "heart"
+    }
 }

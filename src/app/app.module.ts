@@ -11,7 +11,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppStoreModule } from './store/AppStoreModule';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { LoadingComponent } from './components/loading/loading.component';
-import { initializeApp } from 'firebase/app';
+import { initializeApp } from '@angular/fire/app';
+
+import { FIREBASE_OPTIONS } from '@angular/fire/compat';
+import { provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [AppComponent, LoadingComponent],
@@ -19,11 +22,15 @@ import { initializeApp } from 'firebase/app';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
     ...AppStoreModule,
     StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    provideFirebaseApp( () => initializeApp(environment.firebase))
   ],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  providers: [
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    { provide: FIREBASE_OPTIONS, useValue: environment.firebase },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

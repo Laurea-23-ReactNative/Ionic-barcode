@@ -7,6 +7,8 @@ import { IonicModule } from '@ionic/angular';
 import { SignaturePageRoutingModule } from './signature-routing.module';
 
 import { SignaturePage } from './signature.page';
+import { ActivatedRoute } from '@angular/router';
+import { Firestore } from '@angular/fire/firestore';
 
 @NgModule({
   imports: [
@@ -17,4 +19,7 @@ import { SignaturePage } from './signature.page';
   ],
   declarations: [SignaturePage]
 })
-export class SignaturePageModule {}
+export class SignaturePageModule {
+
+
+}
