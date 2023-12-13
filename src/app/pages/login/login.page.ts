@@ -14,7 +14,7 @@ import {
   loginSuccess,
   loginFail,
 } from 'src/app/store/login/login.actions';
-import { ToastController } from '@ionic/angular';
+import { NavController, ToastController } from '@ionic/angular';
 import { AuthService } from 'src/app/services/auth/auth.service';
 import { Subscription } from 'rxjs';
 
@@ -32,7 +32,8 @@ export class LoginPage implements OnInit, OnDestroy {
     private formBuilder: FormBuilder,
     private store: Store<AppState>,
     private toastController: ToastController,
-    private authService: AuthService
+    private authService: AuthService,
+    private navController: NavController
   ) {}
 
   ngOnInit() {
@@ -71,7 +72,7 @@ export class LoginPage implements OnInit, OnDestroy {
   // on kirjautunut
   private onIsLoggedIn(loginState: LoginState) {
     if (loginState.isLoggedIn) {
-      this.router.navigate(['index']);
+      this.navController.navigateRoot('index');
     }
   }
 
